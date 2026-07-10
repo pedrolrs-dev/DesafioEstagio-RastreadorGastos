@@ -31,49 +31,62 @@ Sistema Full-Stack para gerenciamento e controle de finanças residenciais, dese
 Certifique-se de ter o **SDK do .NET 10** (ou superior) e o **Node.js** instalados em sua máquina.
 
 ### 1. Clonando o Repositório
-```bash
-git clone <LINK_DO_SEU_REPOSITORIO_AQUI>
-cd ControleGastos
 
-2. Executando o Back-end (.NET)
+```bash
+git clone https://github.com/pedrolrs-dev/DesafioEstagio-RastreadorGastos.git
+cd ControleGastos
+```
+
+### 2. Executando o Back-end (.NET)
+
 Em um terminal, navegue até a pasta da API:
 
-Bash
+```bash
 cd ExpenseTracker.API
+```
+
 Caso as tabelas do banco não estejam criadas, gere o arquivo local executando:
 
-Bash
+```bash
 dotnet ef database update
+```
+
 Em seguida, inicialize o servidor da API:
 
-Bash
+```bash
 dotnet run
-O servidor iniciará localmente. Você pode visualizar a documentação interativa das rotas acessando o Swagger em: http://localhost:<PORTA>/swagger/index.html (substitua pela porta gerada no seu terminal).
+```
 
-3. Executando o Front-end (React)
+O servidor iniciará localmente. Você pode visualizar a documentação interativa das rotas acessando o Swagger em: `http://localhost:<PORTA>/swagger/index.html` (substitua pela porta gerada no seu terminal).
+
+### 3. Executando o Front-end (React)
+
 Abra um novo terminal, navegue até a pasta web do projeto:
 
-Bash
+```bash
 cd ExpenseTracker.Web
+```
+
 Instale as dependências necessárias:
 
-Bash
+```bash
 npm install
+```
+
 Inicialize a aplicação em modo de desenvolvimento:
 
-Bash
+```bash
 npm run dev
-Abra o link gerado no terminal (geralmente http://localhost:5173) no seu navegador para interagir com o sistema.
+```
 
-📂 Estrutura do Código e Padrões
-O projeto foi estruturado seguindo boas práticas de arquitetura desacoplada:
-
-Models & DTOs: Classes limpas representando as tabelas do banco de dados e objetos de transferência de dados customizados para o relatório de totais.
-
-Controllers: Controladores REST organizando os endpoints de forma semântica (GET, POST, DELETE).
-
-Hooks & Services (Front-end): Utilização de useState, useEffect e useCallback de forma otimizada para evitar renderizações em cascata e garantir aderência estrita às regras do compilador TypeScript e do ESLint.
-
+Abra o link gerado no terminal (geralmente `http://localhost:5173`) no seu navegador para interagir com o sistema.
 
 ---
 
+## 📂 Estrutura do Código e Padrões
+
+O projeto foi estruturado seguindo boas práticas de arquitetura desacoplada:
+
+- **Models & DTOs:** Classes limpas representando as tabelas do banco de dados e objetos de transferência de dados customizados para o relatório de totais.
+- **Controllers:** Controladores REST organizando os endpoints de forma semântica (GET, POST, DELETE).
+- **Hooks & Services (Front-end):** Utilização de `useState`, `useEffect` e `useCallback` de forma otimizada para evitar renderizações em cascata e garantir aderência estrita às regras do compilador TypeScript e do ESLint.
